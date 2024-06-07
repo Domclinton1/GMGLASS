@@ -1,0 +1,981 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #223248;
+    font-family: 'work sans', sans-serif;
+}
+.menuHamburguer {
+    display: none;
+    font-size: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.menuPai {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    color: #223248;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 2;
+    transition: top 0.3s;
+    position: fixed;
+    
+   
+}
+
+.logo img {
+    height: 150px;
+    margin-left: 60px;
+    animation: zoomImage 2s infinite;
+}
+.menuFilho {
+    display: flex;
+    justify-content: flex-end;    
+}
+
+.menuLista {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+    align-items: center;
+    margin: 30px;    
+    cursor: pointer;
+    
+}
+.menuLista li:hover {
+    color: #0ca5cf;
+    transition: 0.5s;
+}
+.menuLista li:last-child {
+    border: 1px solid #223248;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+
+.menuLista li:last-child:hover {
+    border: 1px solid #0ca5cf;
+    transition: 1s;
+   
+}
+main {
+    margin-top: 100px;
+}
+.hero {
+   background-image: linear-gradient(to top, rgba(8, 16, 24, 0.1),  #ffffff), url(./assets/icons/janelasso.jpeg);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+.logoHero img {
+    animation: zoomImage 3s infinite;
+    margin-top: -50px;
+}
+@keyframes zoomImage {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.order {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #0ca5cf;
+    color: #ffffff;
+    font-family: 'work sans', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    animation: zoomImage 5s infinite;
+    margin-top: -80px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+}
+.order:hover {
+    border: 1px solid #ffffff;
+    
+    
+}
+.heroText {
+    margin: 50px;
+    line-height: 2;
+    text-shadow: 15px 0 20px #0ca5cf;
+    width: 40%;
+    color: #223248;
+}
+.sobre {
+    display: flex;
+    gap: 1.8rem;
+    justify-content: center;
+    text-align:justify;
+    padding: 30px;
+}
+.textoSobre {
+    gap: 1.8rem;
+    display: flex;
+    flex-direction: column;
+}
+.textoSobre p {
+    width: 90%;
+    line-height: 2;
+    font-weight: 600;
+    
+    
+   
+
+}
+.sobreImg img {
+    animation: zoomImage 3s infinite;
+    margin-top: -100px;
+
+}
+
+.sobreImgs img {
+    width: 400px;
+    margin: 30px;
+    border-radius: 10px;
+    
+}
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services p {
+    margin: 30px;
+    width: 60%;
+    line-height: 2;
+    font-weight: 600;
+}
+.service-list {
+    display: flex;
+    gap: 1.5rem
+}
+.jobs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    color: black;
+    width: 300px;
+    height: 400px;
+    background-color: #223248;
+}
+.jobs img {
+    width: 100%;
+    height: 300px;
+    transition: transform(0.2s);
+    margin: 10px 0;
+    border-radius: 8px;
+}
+.job-info {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: #223248;
+    z-index: 1;
+    color: #ffffff;
+}
+.job-info button {
+    color: whitesmoke;
+    background-color:  #0ca5cf;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 99; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+    
+}
+.modalText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.modalText h2 {
+    margin: 20px auto;
+}
+.modalList {
+    list-style: none;
+    transition: 1s;
+    width: 60%;
+    margin: auto;
+    line-height: 1.8;
+    text-align: left;
+    color: white;
+    
+}
+.modal-content {
+    background-color:  #223248;
+    box-shadow: rgb(50, 119, 175) 10px 10px 20px;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.8rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalSlider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.modalSlides {
+    display: flex;
+    transition: transform 0.5s ease;   
+}
+.modalSlide {
+    flex: 1 0 100%;
+    text-align: center;
+    padding: 20px;
+}
+.modalSlide .active{
+    display: block;
+}
+.modalSlide img {
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: rgb(50, 119, 175) 5px 5px 10px 7px;
+}
+.modalButtons {
+    margin: 15px;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.8rem;
+    border-radius: 1px;
+    
+}
+.modalButtons button {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+}
+.orderButton {
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #0ca5cf;
+    color: #ffffff;
+    font-family: 'work sans', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    animation: zoomImage 5s infinite;
+    gap: 10px;
+    display: flex;
+    
+    
+
+}
+.orderButton:hover {
+    border: 1px solid #ffffff;
+    
+    
+}
+.coments{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background:  #60c3df;
+    color: #223248;
+    align-items: center;
+    
+    
+    
+}
+.coments ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 50%;
+    margin: 20px auto;
+    position: absolute;
+    flex: 1;
+    right: 20px;
+    overflow: hidden;
+}
+.coments li {
+    font-size: 35px;
+    font-weight: 500;
+    display: none;
+}
+.coments li:first-child {
+    display: block;
+}
+.coments div {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    display: inline-block;
+    flex: 1;
+}
+.coments img {
+    height: 400px;
+    display: block;
+    animation: zoomImage 3s infinite;
+}
+.fotos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+      
+  }
+.slide {
+    
+    flex: 1 0 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.slide img {
+    width: 800px;
+    height: 600px;
+    border-radius: 15px;
+}
+.buttons {
+    display: flex;
+    gap: 1.8rem;
+    width: 50%;
+    margin: 10px auto;
+    
+  
+}
+.buttons button {
+    width: 375px;
+    border-radius: 10px;
+    background-color: rgb(246, 248, 249);    
+    padding: 5px;    
+    cursor: pointer;    
+    display: flex;    
+    justify-content: center;    
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.buttons button:hover {
+    border: 3px solid #0ca5cf;
+    transition: 0.5s;
+    
+}
+
+
+.contato {
+    background-image:linear-gradient(to bottom,rgba(6, 18, 30, 0.1), #223248), url(./assets/icons/guarda-corpo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 50px;
+    color: #ffffff ;
+   
+}
+.contato ul {
+    
+    list-style: none;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: 600;
+    box-shadow: #0ca5cf 2px 0 7px 10px;
+    border-radius: 10px;
+    margin: 20px;
+    gap: 1.3rem;
+}
+.contato li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    width: 100%;
+    padding: 5px;
+}
+.contato li:hover {
+    border: 1px solid #0ca5cf;
+    border-radius: 10px;
+    box-shadow: #0ca5cf 10px 0 10px;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.8rem ;
+    
+}
+.location p {
+    color: gray;
+    font-weight: 500;
+}
+footer {
+    background-color: #223248;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    padding: 10px;
+    gap: 1.6rem;
+}
+.btn-whatsapp{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+}
+.btn-whatsapp img {
+    max-width: 74px;
+    transition: 0.4s;
+    animation: zoomImage 2s infinite;
+}
+.btn-whatsapp img:hover {
+    transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+.socialMedia {
+    gap: 1.3rem;
+    display: flex;
+}
+.socialMedia i {
+    animation: translateY 0.8s infinite alternate;  
+    cursor: pointer;
+}
+.socialMedia i:hover {
+    color: #0ca5cf;
+}
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-8px) scale(1.1);
+    } 
+}
+/*Responsividade*/
+
+@media screen and (max-width: 430px) {
+    main{
+        width: 100%;
+        max-width: 430px;
+    }
+    body {
+        width: 100%;
+        max-width: 430px;
+    }
+    
+    .logo img {
+        width: 100px;
+
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .menuHamburguer {
+        display: block;
+        z-index: 99;
+    }
+    .menuFilho {
+        display: none;
+        width: 100%;
+    }
+    .menuFilho.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 2;
+    }
+    .menuLista {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+
+    }
+    .order {
+        z-index: 1;
+    }
+    
+    .hero {
+        width: 100%;
+        max-width: 430px;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: 40%;
+        background-size: 100% 100%;
+        gap: 1.8rem;
+    }
+    .hero img {
+        width: 92%;
+        max-width: 350px;
+        
+        
+    }
+    .hero button {
+        width: 60%;
+        max-width: 190px;
+    }
+    .hero p {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 15px;
+        width: 100%;
+    }
+    .sobre {
+        display: block;
+
+    }
+    .sobre p {
+        width: 100%;
+    }
+    
+    .sobre img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .services p {
+        padding: 30px;
+    }
+    .services p {
+        width: 100%;
+    }
+    .service-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .jobs {
+        width: 100%;
+        min-width: 200px;
+    }
+    .modalText  {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .modalSlide img {
+        width: 100%;
+    }
+    .modalButtons{
+        width: 100%;
+    }
+    .modalList {
+        width: 100%;
+    }
+    .coments {
+        width: 100%;
+        max-width: 430px;
+        display: flex;
+        gap: 1.8rem;    
+       }
+       .coments div img {
+        width: 50%;
+        margin-left: 10px;    
+       }
+       .coments li {
+        font-size: 20px; 
+        font-weight: 600;
+       }
+    .fotos {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+       }
+    .slides img{
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+    
+    }
+    .buttons {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .buttons button {
+        width: 40%;
+        margin: 10px auto;
+        
+    }
+    .location{
+        width: 100%;
+        max-width: 430px;
+        
+    }
+      
+    .contato {
+        width: 100%;
+        max-width: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       }
+       .contato h1 {
+        font-size: 40px;
+       }
+       .contato p {
+        font-size: 20px;
+       }
+       .contato ul {
+        width: 100%;
+        height: 50%;
+        
+       }
+       .contato ul li{
+        width: 100%;
+       }
+       
+       footer {
+        width: 100%;
+        max-width: 430px;
+        
+       }
+       .btn-whatsapp img {
+        max-width: 44px;
+        }
+}
+@media screen and (min-width: 430px) and (max-width: 768px) {
+    .menuHamburguer {
+        display: block;
+    }
+    .menuFilho {
+        display: none;
+        width: 100%;
+    }
+    .menuFilho.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1;
+    }
+    .menuLista {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+
+    }
+    .sobre {
+        display: block;
+    }
+    .hero {
+        width: 100%;
+        max-width: 768px;
+        min-width:430px;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: 40%;
+        background-size: 100% 100%;
+        gap: 1.8rem;
+    }
+    .hero img {
+        width: 92%;
+        max-width: 350px;
+        
+        
+    }
+    .hero button {
+        width: 60%;
+        max-width: 190px;
+    }
+    .hero p {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 15px;
+        width: 100%;
+    }
+    .sobre {
+        display: block;
+
+    }
+    .sobre p {
+        width: 100%;
+    }
+    
+    .sobre img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .services p {
+        padding: 30px;
+    }
+    .services p {
+        width: 100%;
+    }
+    .service-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .jobs {
+        width: 100%;
+        min-width: 200px;
+    }
+    .job-info {
+        width: 100%;
+        min-width: 200px;
+    }
+    .modalText  {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .modalSlide img {
+        width: 100%;
+    }
+    .modalButtons{
+        width: 100%;
+    }
+    .modalList {
+        width: 100%;
+    }
+    .coments {
+        width: 100%;
+        max-width: 500px;
+        min-width: 430px;
+        display: flex;
+        gap: 1.8rem;    
+       }
+       .coments div img {
+        width: 50%;
+        margin-left: 10px;    
+       }
+       .coments li {
+        font-size: 20px; 
+        font-weight: 600;
+       }
+    .fotos {
+        width: 100%;
+        max-width: 768px;
+        min-width: 430px;
+        margin: 0 auto;
+       }
+
+    .slides img{
+        width: 100%;
+        max-width: 768px;
+        min-width: 430px;
+        margin: 0 auto;
+    
+    }
+    .buttons {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .buttons button {
+        width: 40%;
+        margin: 10px auto;
+        
+    }
+    .location{
+        width: 100%;
+        max-width: 768px;
+        min-width: 431px;
+    }
+      
+    .contato {
+        width: 100%;
+        max-width: 768px;
+        min-width: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       }
+       .contato h1 {
+        font-size: 40px;
+       }
+       .contato p {
+        font-size: 20px;
+       }
+       .contato ul {
+        width: 100%;
+        max-width: 300px;
+        height: 50%;
+        
+       }
+       .contato ul li{
+        width: 100%;
+       }
+       
+       footer {
+        width: 100%;
+        max-width: 768px;
+        min-width: 430px;
+       }
+       .btn-whatsapp img {
+            max-width: 64px;
+        }
+}
+@media screen and (min-width: 430px) and (max-width: 500px) {
+    .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .jobs {
+        width: 100%;
+        flex: 1 1 200px;
+    }
+   .job-info {
+    width: 100%;
+   }
+   
+   .fotos {
+    width: 100%;
+    max-width: 500px;
+    min-width: 430px;
+    margin: 0 auto;
+   }
+
+    .slides img{
+    width: 100%;
+    max-width: 500px;
+    min-width: 430px;
+    margin: 0 auto;
+
+    }
+    .btn-whatsapp img {
+        max-width: 54px;
+    }
+}
