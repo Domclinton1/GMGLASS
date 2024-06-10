@@ -36,7 +36,7 @@ function insta() {
 }
 function email() {
     var click = window.document.querySelectorAll('email')
-    window.location.href = 'mailto:vidrosa.vidracaria@gmail.com';
+    window.location.href = 'mailto:gmglassvidrostemperados@gmail.com';
 }
 
 
