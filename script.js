@@ -67,7 +67,19 @@ window.addEventListener('click', function(event) {
     }
 });
 
+  // Função para fechar o menu quando a página é rolada
+  function closeMenuOnScroll() {
+    var menu = document.querySelectorAll('menuFilho');
 
+    // Verifica se o menu está aberto
+    if (menu.classList.contains('active')) {
+        // Fecha o menu
+        menu.classList.remove('active');
+    }
+}
+
+// Adiciona um event listener para escutar por rolagens na página
+window.addEventListener('scroll', closeMenuOnScroll);
 
 
 
@@ -195,3 +207,5 @@ document.addEventListener('DOMContentLoaded', function () {
     
     setInterval(nextSlide, 5000); // Altere o intervalo de troca de slide conforme necessário
   });
+
+
