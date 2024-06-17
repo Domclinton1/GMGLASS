@@ -44,6 +44,10 @@ function toggleMenu() {
     const menu = document.querySelector('.menuFilho');
     menu.classList.toggle('active');
 }
+function dev() {
+    var click = window.document.querySelectorAll('dev')
+    window.open("https://www.domlinksolucoesdigitais.com.br")
+}
 
 let lastScrollTop = 0;
 window.addEventListener('scroll', function() {
