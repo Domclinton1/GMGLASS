@@ -760,6 +760,9 @@ footer {
        footer {
         width: 100%;
         max-width: 430px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         
        }
        .btn-whatsapp img {
