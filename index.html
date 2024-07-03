@@ -36,35 +36,14 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
         
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16605576820"></script>
+   <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16605576820"></script> 
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-16605576820');
+     window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-16605576820');
     </script>
 
-    <!-- Event snippet for Purchase conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-        function gtag_report_conversion(url) {
-        var callback = function () {
-            if (typeof(url) != 'undefined') {
-            window.location = url;
-            }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16605576820/2t8_CIbDgrkZEPT8k-49',
-            'value': 1.0,
-            'currency': 'BRL',
-            'transaction_id': '',
-            'event_callback': callback
-        });
-        return false;
-        }
-        </script>
+   <!-- Event snippet for Purchase conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> 
+   function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-16605576820/2t8_CIbDgrkZEPT8k-49', 'value': 1.0, 'currency': 'BRL', 'transaction_id': '', 'event_callback': callback }); return false; } 
+   </script>
 </head>
 <body>
     <header class="menuPai">
@@ -90,7 +69,7 @@
             <div class="logoHero" data-aos="zoom-in-up" data-aos-duration="2000">
                 <img src="./assets/icons/logo.png" alt="">
             </div>
-            <button class="order" onclick="wpp1()">Agendar Orçamento!</button>
+            <button class="order" onclick="wpp1(); return gtag_report_conversion('http://gmglass.com.br')">Agendar Orçamento!</button>
             <div class="heroText">
                 <h1 data-aos="fade-down" data-aos-duration="1000">Transformando espaços com transparência e excelência</h1>
                 <p data-aos="fade-up" data-aos-duration="1500"><strong>Deixe-nos transformar seu sonho em realidade. Solicite um orçamento gratuito hoje mesmo!</strong></p>
