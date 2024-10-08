@@ -178,8 +178,11 @@ main {
     font-weight: 600;
 }
 .service-list {
-    display: flex;
-    gap: 1.5rem
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
+    grid-template-rows: repeat(2, auto);   /* 2 linhas com altura automática */
+    gap: 10px; /* Espaço entre os itens */
+    align-items: center;
 }
 .jobs {
     flex: 1;
