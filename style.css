@@ -708,6 +708,16 @@ footer {
         width: 100%;
         min-width: 200px;
     }
+    .modal-content{
+        width: 95%;
+    }
+    .modal-content h2 {
+        font-size: 25px;
+    }
+    .modal-content p {
+        padding: 0;
+    }
+    
     .modalText  {
         width: 100%;
         margin: 0 auto;
@@ -1083,9 +1093,6 @@ footer {
    .esquadria-text {
     padding: 15px;
     text-align: justify;
-   }
-   .esquadria-text h1, .esquadria-text h2, .esquadria-text p {
-    
    }
    footer {
     justify-content: space-between;
