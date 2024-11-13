@@ -190,6 +190,9 @@ main {
     line-height: 2;
     font-weight: 600;
 }
+.services .order {
+    margin: 5px;
+}
 .service-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
@@ -256,19 +259,24 @@ main {
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     align-items: center;
     margin: 0 auto;
     color: #ffffff;
 }
+.modalText p {
+    width: 100%;
+    margin: 20px;
+}
 
 .modalText h2 {
-    margin: 20px auto;
+    margin: 10px auto;
+    font-size: 2rem;
 }
 .modalList {
     list-style: none;
     transition: 1s;
-    width: 60%;
+    width: 100%;
     margin: auto;
     line-height: 1.8;
     text-align: left;
@@ -277,15 +285,15 @@ main {
 }
 .modal-content {
     background-color:  var(--azul-marinho);
-    box-shadow: rgb(50, 119, 175) 10px 10px 20px;
+    box-shadow: var(--cinza-1) 10px 10px 20px;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     gap: 1.8rem;
 }
 
@@ -322,8 +330,9 @@ main {
 }
 .modalSlide img {
     height: 500px;
+    max-width: 400px;
     border-radius: 10px;
-    box-shadow: rgb(50, 119, 175) 5px 5px 10px 7px;
+    box-shadow: var(--cinza-1) 5px 5px 10px 7px;
 }
 .modalButtons {
     margin: 15px;
