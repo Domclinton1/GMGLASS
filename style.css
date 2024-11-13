@@ -1058,6 +1058,23 @@ footer {
     justify-content: space-between;
     padding: 40px;
 }
+.back {
+    background-color: var(--vermelho);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.back a {
+    color: var(--branco);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.back a:hover {
+    letter-spacing: 0.2rem;
+    color: gold;
+}
 @media screen and (max-width: 450px) {
     .esquadria-flex {
         display: flex;
