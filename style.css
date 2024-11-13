@@ -1094,6 +1094,10 @@ footer {
     padding: 15px;
     text-align: justify;
    }
+   .esquadria-main .modalSlider .modalSlides .modalSlide img {
+    max-width: 430px;
+    width: 100%;
+   }
    footer {
     justify-content: space-between;
     text-align: justify;
