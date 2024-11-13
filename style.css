@@ -1,3 +1,11 @@
+:root {
+    --azul-marinho: #1a1a37;
+    --branco: #f8f9fa;
+    --vermelho: #992025;
+    --cinza-1: #52505f;
+    --cinza-2: #a9a9b5;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,8 +17,8 @@ html {
 }
 
 body {
-    background-color: #ffffff;
-    color: #223248;
+    background-color: var(--azul-marinho);
+    color: var(--branco);
     font-family: 'work sans', sans-serif;
 }
 .menuHamburguer {
@@ -22,8 +30,8 @@ body {
 .menuPai {
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
-    color: #223248;
+    background-color: var(--azul-marinho);
+    color: var(--branco);
     align-items: center;
     text-align: center;
     font-weight: 600;
@@ -58,7 +66,7 @@ body {
     
 }
 .menuLista li:hover {
-    color: #0ca5cf;
+    color:  var(--vermelho);
     transition: 0.5s;
 }
 .menuLista li:last-child {
@@ -74,7 +82,7 @@ body {
 }
 
 .menuLista li:last-child:hover {
-    border: 1px solid #0ca5cf;
+    border: 1px solid var(--vermelho);
     transition: 1s;
    
 }
@@ -82,7 +90,7 @@ main {
     margin-top: 100px;
 }
 .hero {
-   background-image: linear-gradient(to top, rgba(8, 16, 24, 0.1),  #ffffff), url(./assets/icons/janelasso.jpeg);
+   background-image: linear-gradient(to top, rgba(8, 16, 24, 0.1),  var(--azul-marinho)), url(./assets/icons/janelasso.jpeg);
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -90,7 +98,7 @@ main {
    text-align: center;
 }
 .logoHero img {
-    animation: zoomImage 3s infinite;
+    animation: zoomImage 3s;
     margin-top: -50px;
 }
 @keyframes zoomImage {
@@ -106,15 +114,16 @@ main {
 }
 
 .order {
-    width: 200px;
+    max-width: 400px;
+    width: 100%;
     height: 50px;
     border-radius: 10px;
-    background-color: #0ca5cf;
+    background-color: var(--azul-marinho)transparent;
     color: #ffffff;
     font-family: 'work sans', sans-serif;
-    font-size: 17px;
+    font-size: 100%;
     font-weight: 500;
-    animation: zoomImage 5s infinite;
+    animation: zoomImage 5s;
     margin-top: -80px;
     cursor: pointer;
     transition: 0.5s;
@@ -122,16 +131,20 @@ main {
 }
 .order:hover {
     border: 1px solid #ffffff;
+    letter-spacing: 0.5rem;
+    max-width: 400px;
+    width: 100%;
     
     
 }
 .heroText {
     margin: 50px;
     line-height: 2;
-    text-shadow: 15px 0 20px #0ca5cf;
-    width: 40%;
-    color: #223248;
+    text-shadow: 15px 0 20px var(--branco);
+    width: 100%;
+    color: var(--branco);
 }
+.heroText 
 .sobre {
     display: flex;
     gap: 1.8rem;
@@ -194,7 +207,7 @@ main {
     color: black;
     width: 300px;
     height: 400px;
-    background-color: #223248;
+    background-color: var(--cinza-2);
 }
 .jobs img {
     width: 100%;
@@ -209,18 +222,22 @@ main {
     flex-direction: column;
     justify-content: space-between;
     padding: 14px;
-    background-color: #223248;
+    background-color: var(--cinza-2);
     z-index: 1;
     color: #ffffff;
 }
 .job-info button {
     color: whitesmoke;
-    background-color:  #0ca5cf;
+    background-color:  var(--vermelho);
     padding: 4px 8px;
     border-radius: 4px;
     border: 0;
     cursor: pointer;
     font-weight: 600;
+    transition: 0.5s;
+}
+.job-info button:hover {
+    letter-spacing: 0.5rem;
 }
 .modal {
     display: none; 
@@ -259,7 +276,7 @@ main {
     
 }
 .modal-content {
-    background-color:  #223248;
+    background-color:  var(--azul-marinho);
     box-shadow: rgb(50, 119, 175) 10px 10px 20px;
     margin: 15% auto; 
     padding: 20px;
@@ -336,7 +353,7 @@ main {
     width: 220px;
     height: 50px;
     border-radius: 10px;
-    background-color: #0ca5cf;
+    background-color: var(--azul-marinho);
     color: #ffffff;
     font-family: 'work sans', sans-serif;
     font-size: 17px;
@@ -346,7 +363,7 @@ main {
     align-items: center;
     justify-content: center;
     margin: 20px;
-    animation: zoomImage 5s infinite;
+    animation: zoomImage 5s;
     gap: 10px;
     display: flex;
     
@@ -355,6 +372,9 @@ main {
 }
 .orderButton:hover {
     border: 1px solid #ffffff;
+    letter-spacing: 0.5rem;
+    max-width: 400px;
+    width: 100%;
     
     
 }
@@ -363,7 +383,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    background:  #60c3df;
+    background:  var(--cinza-2);
     color: #223248;
     align-items: center;
     
@@ -462,7 +482,7 @@ main {
 
 
 .contato {
-    background-image:linear-gradient(to bottom,rgba(6, 18, 30, 0.1), #223248), url(./assets/icons/guarda-corpo.jpeg);
+    background-image:linear-gradient(to bottom,rgba(6, 18, 30, 0.1), var(--azul-marinho)), url(./assets/icons/guarda-corpo.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -472,7 +492,7 @@ main {
     text-align: center;
     flex-direction: column;
     padding: 50px;
-    color: #ffffff ;
+    color: var(--branco) ;
    
 }
 .contato ul {
@@ -485,7 +505,7 @@ main {
     justify-content: space-between;
     padding: 20px;
     font-weight: 600;
-    box-shadow: #0ca5cf 2px 0 7px 10px;
+    box-shadow: var(--cinza-1) 2px 0 7px 10px;
     border-radius: 10px;
     margin: 20px;
     gap: 1.3rem;
@@ -500,9 +520,9 @@ main {
     padding: 5px;
 }
 .contato li:hover {
-    border: 1px solid #0ca5cf;
+    border: 1px solid var(--cinza-1);
     border-radius: 10px;
-    box-shadow: #0ca5cf 10px 0 10px;
+    box-shadow: var(--cinza-1) 10px 0 10px;
 }
 .location {
     display: flex;
@@ -518,8 +538,8 @@ main {
     font-weight: 500;
 }
 footer {
-    background-color: #223248;
-    color: #ffffff;
+    background-color:var(--azul-marinho);
+    color: var(--branco);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -569,7 +589,7 @@ footer {
     cursor: pointer;
 }
 .socialMedia i:hover {
-    color: #0ca5cf;
+    color: var(--vermelho);
 }
 @keyframes translateY {
     from{
@@ -612,7 +632,7 @@ footer {
         position: absolute;
         top: 80px;
         left: 0;
-        background-color: white;
+        background-color: var(--azul-marinho);
         width: 100%;
         padding: 20px 0;
         z-index: 2;
@@ -786,7 +806,7 @@ footer {
         position: absolute;
         top: 80px;
         left: 0;
-        background-color: white;
+        background-color: var(--azul-marinho);
         width: 100%;
         padding: 20px 0;
         z-index: 1;
