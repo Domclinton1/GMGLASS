@@ -49,7 +49,7 @@ body {
 .logo img {
     height: 150px;
     margin-left: 60px;
-    animation: zoomImage 2s infinite;
+    
 }
 .menuFilho {
     display: flex;
@@ -118,20 +118,20 @@ main {
     width: 100%;
     height: 50px;
     border-radius: 10px;
-    background-color: var(--azul-marinho)transparent;
+    background-color: rgb(46, 232, 46);
     color: #ffffff;
-    font-family: 'work sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 100%;
     font-weight: 500;
-    animation: zoomImage 5s;
     margin-top: -80px;
     cursor: pointer;
     transition: 0.5s;
     z-index: 1;
+    text-transform: uppercase;
 }
 .order:hover {
     border: 1px solid #ffffff;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.1rem;
     max-width: 400px;
     width: 100%;
     
@@ -140,7 +140,7 @@ main {
 .heroText {
     margin: 50px;
     line-height: 2;
-    text-shadow: 15px 0 20px var(--branco);
+    text-shadow: 1px 3px 1px black;
     width: 100%;
     color: var(--branco);
 }
@@ -192,6 +192,9 @@ main {
 }
 .services .order {
     margin: 5px;
+    width: 290px;
+    font-weight: 700;
+    
 }
 .service-list {
     display: grid;
@@ -240,7 +243,7 @@ main {
     transition: 0.5s;
 }
 .job-info button:hover {
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.1rem;
 }
 .modal {
     display: none; 
@@ -381,7 +384,7 @@ main {
 }
 .orderButton:hover {
     border: 1px solid #ffffff;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.1rem;
     max-width: 400px;
     width: 100%;
     
@@ -608,9 +611,191 @@ footer {
         transform: translateY(-8px) scale(1.1);
     } 
 }
-/*Responsividade*/
+/* Seção de Avaliações */
+#avaliacoes-gmglass {
+    padding: 60px 20px;
+    background-color: var(--azul-marinho);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
 
-@media screen and (max-width: 430px) {
+#avaliacoes-gmglass .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#avaliacoes-gmglass h2 {
+    font-size: 2em;
+    color: var(--branco);
+    line-height: 1;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Novo e Atualizado CSS para o Carrossel Estilo Netflix */
+.carousel-container {
+    position: relative;
+    max-width: 100%; /* Ocupa a largura total do container pai */
+    margin: 0 auto 20px auto;
+    overflow: hidden; /* Esconde itens que não estão na viewport */
+    padding: 0 10px; /* Espaço para os botões nas laterais */
+}
+
+.avaliacoes-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Ajuste para remover espaçamento extra causado por itens múltiplos */
+    align-items: flex-start;
+    gap: 20px; /* Espaçamento entre os itens do carrossel */
+}
+
+.avaliacao-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    
+    /* Configuração para o estilo Netflix: 3 itens por linha em telas grandes */
+    min-width: calc((100% / 3) - 14px); /* (100% / número de itens visíveis) - (gap * (número de itens - 1) / número de itens) */
+    box-sizing: border-box;
+    flex-shrink: 0; /* Impede que os itens encolham */
+}
+
+.avaliacao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.nome-cliente {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.estrelas {
+    color: #FFD700; /* Cor de estrela do Google */
+    font-size: 1.2em;
+}
+
+.estrelas .fas.fa-star-half-alt {
+    color: #FFD700;
+}
+
+.comentario {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    overflow: hidden; /* Garante que o texto não "vaze" se for muito longo */
+    display: -webkit-box; /* Para limitar linhas */
+    -webkit-line-clamp: 5; /* Limita a 5 linhas. Ajuste se precisar de mais/menos */
+    -webkit-box-orient: vertical;
+}
+
+.data-avaliacao {
+    font-size: 0.85em;
+    color: #999;
+    text-align: right;
+    margin-top: auto;
+}
+
+/* Botões do Carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.8em;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.avaliar-btn-wrapper {
+    margin-top: 30px;
+}
+
+.btn-avaliar-google {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4285F4;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-avaliar-google:hover {
+    background-color: #3367D6;
+    transform: translateY(-2px);
+}
+
+.btn-avaliar-google .fab {
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+/* Responsividade para o carrossel estilo Netflix */
+@media (max-width: 1024px) {
+    .avaliacao-item {
+        min-width: calc((100% / 2) - 10px); /* 2 itens por linha em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #avaliacoes-gmglass h2 {
+        font-size: 2em;
+    }
+
+    .carousel-container {
+        padding: 0 20px; /* Reduz o padding para os botões em telas menores */
+    }
+
+    .avaliacao-item {
+        min-width: 100%; /* 1 item por linha em celulares */
+    }
+
+    .carousel-btn {
+        padding: 10px 15px;
+        font-size: 1.5em;
+    }
+
+    .btn-avaliar-google {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
     main{
         width: 100%;
         max-width: 430px;
@@ -658,29 +843,42 @@ footer {
     
     .hero {
         width: 100%;
-        max-width: 430px;
+        padding: 10px;
         background-repeat: no-repeat;
         background-size:cover;
         background-position: 40%;
         background-size: 100% 100%;
-        gap: 1.8rem;
+        gap: 3rem;
+        justify-content: space-between;
+        flex-direction: column-reverse;
     }
     .hero img {
-        width: 92%;
+        width: 200px;
         max-width: 350px;
         
         
     }
     .hero button {
-        width: 60%;
-        max-width: 190px;
+        width: 100%;
+        max-width: 280px;
+        font-weight: 600;
+    
     }
     .hero p {
         display: none;
     }
     .hero h1 {
-        font-size: 15px;
+        font-size: 1.8rem;
+        line-height: 1;
         width: 100%;
+    }
+    .hero h2 {
+        line-height: 1;
+    }
+    .heroText {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
     }
     .sobre {
         display: block;
@@ -694,8 +892,12 @@ footer {
         width: 100%;
         margin: 0 auto;
     }
+    .services h1 {
+        margin-top: 20px;
+    }
     .services p {
-        padding: 30px;
+        padding: 10px;
+        text-align: center;
     }
     .services p {
         width: 100%;
@@ -811,227 +1013,15 @@ footer {
         max-width: 44px;
         }
 }
-@media screen and (min-width: 430px) and (max-width: 768px) {
-    .menuHamburguer {
-        display: block;
-    }
-    .menuFilho {
-        display: none;
-        width: 100%;
-    }
-    .menuFilho.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: var(--azul-marinho);
-        width: 100%;
-        padding: 20px 0;
-        z-index: 1;
-    }
-    .menuLista {
-        flex-direction: column;
-        gap: 1rem;
-        margin: 0;
 
-    }
-    .sobre {
-        display: block;
-    }
-    .hero {
-        width: 100%;
-        max-width: 768px;
-        min-width:430px;
-        background-repeat: no-repeat;
-        background-size:cover;
-        background-position: 40%;
-        background-size: 100% 100%;
-        gap: 1.8rem;
-    }
-    .hero img {
-        width: 92%;
-        max-width: 350px;
-        
-        
-    }
-    .hero button {
-        width: 60%;
-        max-width: 190px;
-    }
-    .hero p {
-        display: none;
-    }
-    .hero h1 {
-        font-size: 15px;
-        width: 100%;
-    }
-    .sobre {
-        display: block;
-
-    }
-    .sobre p {
-        width: 100%;
-    }
-    
-    .sobre img {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .services p {
-        padding: 30px;
-    }
-    .services p {
-        width: 100%;
-    }
-    .service-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr)
-    }
-    .jobs {
-        width: 100%;
-        min-width: 200px;
-    }
-    .job-info {
-        width: 100%;
-        min-width: 200px;
-    }
-    .modalText  {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .modalSlide img {
-        width: 100%;
-    }
-    .modalButtons{
-        width: 100%;
-    }
-    .modalList {
-        width: 100%;
-    }
-    .coments {
-        width: 100%;
-        max-width: 768px;
-        min-width: 430px;
-        display: flex;
-        gap: 1.8rem;    
-       }
-       .coments div img {
-        width: 50%;
-        margin-left: 10px;    
-       }
-       .coments li {
-        font-size: 20px; 
-        font-weight: 600;
-       }
-    .fotos {
-        width: 100%;
-        max-width: 768px;
-        min-width: 430px;
-        margin: 0 auto;
-       }
-
-    .slides img{
-        width: 100%;
-        max-width: 768px;
-        min-width: 430px;
-        margin: 0 auto;
-    
-    }
-    .buttons {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-    .buttons button {
-        width: 40%;
-        margin: 10px auto;
-        
-    }
-    .location{
-        width: 100%;
-        max-width: 768px;
-        min-width: 431px;
-    }
-      
-    .contato {
-        width: 100%;
-        max-width: 768px;
-        min-width: 430px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-       }
-       .contato h1 {
-        font-size: 40px;
-       }
-       .contato p {
-        font-size: 20px;
-       }
-       .contato ul {
-        width: 100%;
-        max-width: 300px;
-        height: 50%;
-        
-       }
-       .contato ul li{
-        width: 100%;
-       }
-       
-       footer {
-        width: 100%;
-        max-width: 768px;
-        min-width: 430px;
-       }
-       .btn-whatsapp img {
-            max-width: 64px;
-        }
-}
-@media screen and (min-width: 430px) and (max-width: 500px) {
-    .service-list {
-        display: flex;
-        flex-wrap: wrap;
-        
-    }
-    .jobs {
-        width: 100%;
-        flex: 1 1 200px;
-    }
-   .job-info {
-    width: 100%;
-   }
-   
-   .fotos {
-    width: 100%;
-    max-width: 500px;
-    min-width: 430px;
-    margin: 0 auto;
-   }
-
-    .slides img{
-    width: 100%;
-    max-width: 500px;
-    min-width: 430px;
-    margin: 0 auto;
-
-    }
-    .btn-whatsapp img {
-        max-width: 54px;
-    }
-}
 .menuLista a {
     text-decoration: none;
     color: var(--branco);
     transition: 0.5s;
 }
 .menuLista a:hover {
-    color: var(--vermelho);
-    letter-spacing: 0.5rem;
+    color: rgb(46, 232, 46);
+    letter-spacing: 0.1rem;
 }
 .esquadria-main {
     display: flex;
@@ -1082,24 +1072,6 @@ footer {
     transition: 0.5s;
 }
 .back a:hover {
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     color: gold;
-}
-@media screen and (max-width: 450px) {
-    .esquadria-flex {
-        display: flex;
-        flex-direction: column;
-    }
-   .esquadria-text {
-    padding: 15px;
-    text-align: justify;
-   }
-   .esquadria-main .modalSlider .modalSlides .modalSlide img {
-    max-width: 430px;
-    width: 100%;
-   }
-   footer {
-    justify-content: space-between;
-    text-align: justify;
-   }
 }

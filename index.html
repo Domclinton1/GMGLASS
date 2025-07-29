@@ -65,9 +65,9 @@
 </head>
 <body>
     <header class="menuPai">
-        <div class="logo" >
+        <a href="#" class="logo" >
             <img src="./assets/icons/logo.png" alt="" >
-        </div>
+        </a>
         <div class="menuHamburguer" onclick="toggleMenu()">
             &#9776;
         </div>
@@ -75,7 +75,7 @@
             <ul class="menuLista">
                 <a href="https://gmglass.com.br/#inicio">Inicio</a>
                 <a href="https://gmglass.com.br/#sobre">Sobre</a>
-                <a href="https://gmglass.com.br/pages/esquadria_de_aluminio.html">Esquadrias de Alumínio</a>
+                <!--<a href="https://gmglass.com.br/pages/esquadria_de_aluminio.html">Esquadrias de Alumínio</a>-->
                 <a href="https://gmglass.com.br/#services">Serviços</a>
                 <a href="https://gmglass.com.br/#fotos">Fotos</a>
                 <a href="https://gmglass.com.br/#local">Endereço</a>
@@ -88,11 +88,11 @@
             <div class="logoHero" data-aos="zoom-in-up" data-aos-duration="2000">
                 <img src="./assets/icons/logo.png" alt="">
             </div>
-            <button class="order" onclick="wpp1(); return gtag_report_conversion()">Solicitar Orçamento! <i class="fa-brands fa-whatsapp fa-1x"></i></button>
+            <button class="order" id="contactButton" onClick="wpp1(); return gtag_report_conversion()">Orçamento no WhatsApp <i class="fa-brands fa-whatsapp fa-1x"></i></button>
             <div class="heroText">
-                <h1 data-aos="fade-down" data-aos-duration="1000">Vidraçaria Mais Escolhida em Igarapé-MG</h1>
-                <h2 data-aos="fade-up" data-aos-duration="1500"><strong>Esquadrias de Alumínio, Vidros Temperados, Box, Espelhos, Portas e Janelas</strong></h2>
-                <h3>Descubra o poder do Blindex e Esquadrias de Alumínio</h3>
+                <h1 data-aos="fade-down" data-aos-duration="1000"><strong>Obras de Arte em Vidros e Esquadrias de Alumínio</strong></h1>
+                <h2 data-aos="fade-up" data-aos-duration="1500">Vidraçaria em Igarapé-MG</h2>
+                
             </div>
         </div>
         
@@ -226,7 +226,7 @@
                                     <li><i class="fa fa-check" aria-hidden="true" style="color: green;" ></i><strong>Personalização completa:</strong> Oferecemos diversas opções de cores, acabamentos e modelos, para que suas esquadrias de alumínio sejam projetadas exatamente como você deseja. Nossos profissionais garantem uma instalação precisa e de alta qualidade.</li>
                                 </ul>
                             </div>
-                            <button class="orderButton" onclick="wpp2(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Solicitar Orçamento!</button>
+                            <button class="orderButton" id="contactButton" onclick="wpp2(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>FALE NO WHATSAPP</button>
                         </div>
                     </div>
                 </div>
@@ -292,7 +292,7 @@
                                 <li><i class="fa fa-check" aria-hidden="true" style="color: green;" ></i> <strong>Segurança:</strong> Oferece proteção ao evitar que o piso fora do box fique molhado e escorregadio.</li>
                                 <li><i class="fa fa-check" aria-hidden="true" style="color: green;" ></i> <strong>Conforto e Privacidade:</strong> Isola a área do banho, proporcionando mais conforto e privacidade no uso diário.</li>
                             </ul>
-                            <button class="orderButton" onclick="wpp1(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento!</button>
+                            <button class="orderButton" id="contactButton" onclick="wpp1(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento!</button>
 
                         </div>
                     </div>
@@ -390,7 +390,7 @@
                             <li><i class="fa fa-check" aria-hidden="true" style="color: green;" ></i> <strong>Design Moderno e Elegante:</strong> Com uma variedade de estilos e acabamentos disponíveis, os guarda-corpos complementam a estética do espaço, adicionando um toque contemporâneo e sofisticado ao ambiente.</li>
                             <li><i class="fa fa-check" aria-hidden="true" style="color: green;" ></i> <strong>Manutenção Simplificada:</strong> Devido à sua superfície lisa e resistente a manchas, os guarda-corpos são fáceis de limpar e exigem pouca manutenção, mantendo sua aparência impecável por muito tempo.</li>
                         </ul>
-                        <button class="orderButton" onclick="wpp1(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento!</button>
+                        <button class="orderButton" id="contactButton" onclick="wpp1(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento!</button>
                     </div>
                 </div>
                 </div>
@@ -476,7 +476,7 @@
                                 <li><i class="fa fa-check" aria-hidden="true" style="color: green;" ></i> <strong>Manutenção Prática:</strong> Com sua superfície lisa e resistente a manchas, as portas Blindex são fáceis de limpar e exigem pouca manutenção, mantendo sua aparência impecável ao longo do tempo.</li>
                             </ul>
                         </div>
-                        <button class="orderButton" onclick="wpp2(), gtag_report_conversion()" ><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento</button>
+                        <button class="orderButton" id="contactButton" onclick="wpp2(), gtag_report_conversion()" ><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento</button>
                     </div>
                     </div>
                 </div>
@@ -563,7 +563,7 @@
                                 <li><i class="fa fa-check" aria-hidden="true" style="color: green;" ></i> <strong>Manutenção Simplificada:</strong> Com sua superfície lisa e resistente a manchas, as janelas Blindex são fáceis de limpar e requerem pouca manutenção, mantendo sua beleza e funcionalidade ao longo do tempo.</li>
                             </ul>
                         </div>
-                        <button class="orderButton" onclick="wpp1(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento!</button>
+                        <button class="orderButton" id="contactButton" onclick="wpp1(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento!</button>
                     </div>
                        
                 </div>
@@ -698,7 +698,7 @@
                                     <li><i class="fa fa-check" aria-hidden="true" style="color: green;" ></i><strong>Manutenção e reparos:</strong>Além da instalação, oferecemos serviços de manutenção e reparos para garantir que suas estruturas de vidro permaneçam seguras e em perfeito estado. Nosso suporte técnico é rápido e eficiente, sempre pronto para atender suas necessidades.</li>
                                 </ul>
                             </div>
-                            <button class="orderButton" onclick="wpp2(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento!</button>
+                            <button class="orderButton" id="contactButton" onclick="wpp2(); return gtag_report_conversion()"><i class="fa-brands fa-whatsapp"></i>Agendar Orçamento!</button>
                         </div>
                       </div>  
                 </div>
@@ -706,24 +706,26 @@
             <p>
                 Na GM GLASS, cada projeto é tratado com a máxima atenção aos detalhes, desde o primeiro contato até a finalização. Nosso objetivo é superar suas expectativas e oferecer um serviço que você possa confiar. Entre em contato conosco e descubra como podemos transformar seu espaço com a transparência e excelência que só a GM GLASS oferece.
             </p>
-            <button class="order" onclick="wpp1(); return gtag_report_conversion()">Solicitar Orçamento! <i class="fa-brands fa-whatsapp fa-1x"></i></button>
+            <button class="order" id="contactButton" onclick="wpp1(); return gtag_report_conversion()">FALE NO WHATSAPP <i class="fa-brands fa-whatsapp fa-1x"></i></button>
         </div>
-        <div class="coments">
-            <div>
-                <img
-                data-aos="flip-up"
-                data-aos-delay="500"
-                data-aos-duration="1500"
-                src="./assets/icons/logo.png" alt="">
+        <section id="avaliacoes-gmglass">
+            <div class="container">
+                <h2>O que nossos clientes dizem sobre a GM GLASS:</h2>
+
+                <div class="carousel-container">
+                    <div class="avaliacoes-carousel">
+                    </div>
+                    <button class="carousel-btn prev-btn">&#10094;</button>
+                    <button class="carousel-btn next-btn">&#10095;</button>
+                </div>
+
+                <div class="avaliar-btn-wrapper">
+                    <a href="https://g.page/r/CZjaRyymY1CXEAI/review" target="_blank" class="btn-avaliar-google">
+                        <i class="fab fa-google"></i> Deixe sua avaliação no Google!
+                    </a>
+                </div>
             </div>
-            <ul class="ulSlides">
-                <li>Serviço bem feito, no prazo combinado, material de boa qualidade e pessoal atencioso. <br> - <strong>Matilde Oliveira</strong>.</li>
-                <li>Bom preço, compromisso com a entrega dos serviços, e sobretudo, cordialidade no atendimento. Estou muito satisfeita. <br> - <strong>Ana Rocha</strong>.</li>
-                <li>Empresa séria, cumpridora de prazo, com pessoal capacitado e responsável. A matéria prima utilizada é de primeira qualidade. Há cinco (5) anos que sou cliente e só tenho elogios a fazer. 
-                <br> - <strong>Edson Santos</strong>.</li>
-                <li>Gostei muito do serviço porque a empresa leva a qualidade dos materiais, maestria da mão de obra e um ótimo atendimento ao cliente. Nota 10! <br> - <strong>Clinton Ribeiro</strong>.</li>
-            </ul>
-        </div>
+        </section>
         <div class="fotos" id="fotos">
             <h1>Fotos</h1>
             <div class="slider">
@@ -1091,8 +1093,8 @@
             <i onclick="email()" class="fas fa-envelope fa-2x"></i>
             
         </div>
-        <em onclick="dev()" style="color: #992025; cursor: pointer; font-weight: 600;">&copy; Developed by Dom Link Soluções Digitais.</em>
-        <a onclick="wpp1(); return gtag_report_conversion()" class="btn-whatsapp" target="_blank" data-aos="zoom-in-up" data-aos-delay="400">
+        <em onclick="dev()" style="color: rgb(4, 209, 195)e; cursor: pointer; font-weight: 600;">&copy; Desenvolvido por Clintin dos Sites.</em>
+        <a id="contactButton" onclick="wpp1(); return gtag_report_conversion()" class="btn-whatsapp" target="_blank" data-aos="zoom-in-up" data-aos-delay="400">
             <img src="assets/icons/whatssapp.svg" alt="Botão whatsapp">
             <span class="tooltip-text">Agende seu orçamento.</span>
         </a>
@@ -1101,6 +1103,14 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById('contactButton').addEventListener('click', function() {
+        
+        fbq('track', 'Contact');
+
+        }, false);
     </script>
 
 
