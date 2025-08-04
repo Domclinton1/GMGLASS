@@ -90,7 +90,7 @@ main {
     margin-top: 100px;
 }
 .hero {
-   background-image: linear-gradient(to top, rgba(8, 16, 24, 0.1),  var(--azul-marinho)), url(./assets/icons/janelasso.jpeg);
+   background-image: linear-gradient(to top, rgba(8, 16, 24, 0.1),  var(--azul-marinho)), url(./assets/icons/janelasso.webp);
    display: flex;
    flex-direction: column;
    justify-content: center;
